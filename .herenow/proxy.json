@@ -1,0 +1,12 @@
+{
+  "proxies": {
+    "/api/chat": {
+      "upstream": "https://api.x.ai/v1/chat/completions",
+      "method": "POST",
+      "headers": {
+        "Authorization": "Bearer ${XAI_API_KEY}"
+      },
+      "rateLimit": "30/hour/ip"
+    }
+  }
+}
